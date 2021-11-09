@@ -8,7 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BenutzerTest {
 
-    @org.junit.jupiter.api.Test   //Test fur die kalkuliere Zeit Methode
+    @org.junit.jupiter.api.Test
+
+    /**
+     * Test fur die kalkuliere Zeit Methode
+     */
     void kalkuliere_zeit() {
         Sport fusball= new Fussball();
         Sport hochsprung= new Hochsprung();

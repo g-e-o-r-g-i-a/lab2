@@ -8,13 +8,23 @@ public class Benutzer {
     private String nachname;
     private List<Sport> sport;
 
-    public Benutzer(String vorname, String nachname, List<Sport> sport) {  //Konstruktor
+    /**
+     * constructor
+     * @param vorname
+     * @param nachname
+     * @param sport
+     */
+    public Benutzer(String vorname, String nachname, List<Sport> sport) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.sport = sport;
     }
 
-    public double kalkuliere_zeit(){  //ich kalukuliere wie viel Zeit fur jeder Sport aus meiner Liste gebraucht wird
+    /**
+     * ich kalukuliere wie viel Zeit fur jeder Sport aus meiner Liste gebraucht wird
+     * @return die  kalkulierte Zeit
+     */
+    public double kalkuliere_zeit(){
         double zeit = 0;
         for (Sport sport : sport){
             zeit += sport.kalkuliere_zeit();
@@ -22,11 +32,21 @@ public class Benutzer {
         return zeit;
     }
 
-    public double kalkuliere_zeit(Sport sport) {  //ich kalkuliere die Zeit fur einen gegebenen Sport
+    /**
+     *  ich kalkuliere die Zeit fur einen gegebenen Sport
+     * @param sport
+     * @return die  kalkulierte Zeit
+     */
+    public double kalkuliere_zeit(Sport sport) {
         return sport.kalkuliere_zeit();
     }
 
-    public double kalkuliere_durchschnitt() {  //ich kalkuliere die Durschscnittzeit fur die Elemente aus meiner Liste
+
+    /**
+     * ich kalkuliere die Durschscnittzeit fur die Elemente aus meiner Liste
+     * @return die kalkulierte Durschschnitt
+     */
+    public double kalkuliere_durchschnitt() {
         double zeit = 0;
         for (Sport sport : sport){
             zeit += sport.kalkuliere_zeit();
